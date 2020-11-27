@@ -23,33 +23,55 @@ public class ServicePrice implements ServiceItem {
        
     @Override
     public void displayService() {
-        System.out.println("#*************************# ");
-        System.out.println("#***Rock n Roll Haircut***# ");
-        System.out.println("#*******Service List******# ");
+        System.out.println("#*************************#");
+        System.out.println("#***Rock n Roll Haircut***#");
+        System.out.println("#*******Service List******#");
         System.out.println("1. Haircut : IDR 45K  ");
         System.out.println("2. Haircut + Hairwash: IDR 55K  ");
         System.out.println("3. Hairwash Only : IDR 15K ");
-        System.out.println("#*************************# ");
+        System.out.println("#*************************#");
         System.out.println("Choose (1/2/3): ");
     }
 
     @Override
     public float getPrice(int serviceItem) {
-        return serviceItem;
+        if(serviceItem ==1){
+            return 45;
+        }else if(serviceItem == 2){
+            return 55;
+        }else if(serviceItem == 3){
+            return 15;
+        }
+        
+        return 0;
     }
 
     @Override
     public boolean checkMemberStatus(String statusMember) {
-       
+        if(statusMember.equals("yes"))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
     @Override
     public float getSale(boolean isMember, float parServicePrice) {
-        return parServicePrice;
+         if(isMember)
+        {
+            return (float) (parServicePrice * 0.1);
+        }
+        else
+        {
+            return 0;
+        }
     }
     
     public float getTotalPay(float PriceService, float discount ){
-    
+        return PriceService - discount;
     }
     
 }
