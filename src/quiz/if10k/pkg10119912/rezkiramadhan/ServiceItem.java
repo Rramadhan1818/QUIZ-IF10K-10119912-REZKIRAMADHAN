@@ -10,5 +10,8 @@ package quiz.if10k.pkg10119912.rezkiramadhan;
  * @author hp
  */
 public interface ServiceItem {
-    
+    public void displayService();
+    public float getPrice(int serviceItem);
+    public boolean checkMemberStatus(String statusMember);
+    public float getSale(boolean isMember, float parServicePrice);
 }

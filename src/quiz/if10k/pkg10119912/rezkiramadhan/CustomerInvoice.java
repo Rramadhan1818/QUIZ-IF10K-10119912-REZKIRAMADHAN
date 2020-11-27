@@ -10,5 +10,5 @@ package quiz.if10k.pkg10119912.rezkiramadhan;
  * @author hp
  */
 public interface CustomerInvoice {
-    
+    public String currentTime();
 }
