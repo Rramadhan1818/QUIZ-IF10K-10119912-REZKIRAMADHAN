@@ -5,6 +5,9 @@
  */
 package quiz.if10k.pkg10119912.rezkiramadhan;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 /**
  *
  * @author hp
@@ -31,7 +34,7 @@ public class Customer extends ServicePrice implements CustomerInvoice {
     }
     
     public boolean isMember(){
-        
+        return member;
     }
     
     public void setMember(boolean member){
@@ -40,7 +43,9 @@ public class Customer extends ServicePrice implements CustomerInvoice {
     
     @Override
     public String currentTime() {
-       
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");  
+        LocalDateTime now = LocalDateTime.now();  
+        return dtf.format(now);  
     }
     
     

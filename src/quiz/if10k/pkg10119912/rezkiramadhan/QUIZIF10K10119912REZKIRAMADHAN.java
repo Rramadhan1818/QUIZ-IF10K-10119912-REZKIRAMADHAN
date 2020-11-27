@@ -18,7 +18,8 @@ public class QUIZIF10K10119912REZKIRAMADHAN {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        ServicePrice servicePrice = new ServicePrice();
+        servicePrice.displayService();
     }
     
 }
